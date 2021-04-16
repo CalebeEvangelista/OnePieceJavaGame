@@ -9,7 +9,6 @@ public class Personagem {
 	private double defesa;
 	private boolean vivo;
 	private String atacante, atacado;
-	Ataques ataqueEscolhido = null;
 	private String nomeGolpe;
 	private int forcaGolpe;
 	private double danoGolpe;
