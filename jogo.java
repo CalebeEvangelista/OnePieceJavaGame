@@ -8,34 +8,30 @@ public class jogo {
 		Personagem ruffy = new Personagem();
 		ruffy.setNome("Ruffy");
 		ruffy.setDefesa(300);
-		ruffy.setForcaAtaque(110);
 		ruffy.setVida(50);
 		ruffy.setVivo(true);
 		
 		Personagem zoro = new Personagem();
 		zoro.setNome("Zoro");
 		zoro.setDefesa(250);
-		zoro.setForcaAtaque(90);
 		zoro.setVida(40);
 		zoro.setVivo(true);
 		
 		Personagem usopp = new Personagem();
 		usopp.setNome("Usopp");
 		usopp.setDefesa(150);
-		usopp.setForcaAtaque(50);
 		usopp.setVida(20);
 		usopp.setVivo(true);
 
 		Personagem nami = new Personagem();
 		nami.setNome("Nami");
 		nami.setDefesa(140);
-		nami.setForcaAtaque(40);
 		nami.setVida(15);
 		nami.setVivo(true);
 		
 		while (true) {
 			System.out.println("###############################");
-			System.out.println("# ONE PIECE BATTLE GAME v1.00 #");
+			System.out.println("# ONE PIECE BATTLE GAME v2.50 #");
 			System.out.println("###############################");
 			System.out.println("########## ATACANTES ##########");
 			System.out.println("# 1. RUFFY                    #");

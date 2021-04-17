@@ -15,8 +15,7 @@ public class Personagem {
 
 	public void ataques(Personagem atacante) {
 
-		switch (nome) {
-		case "Ruffy":
+		if (this.getNome() == "Ruffy") {
 			System.out.println("########### ATAQUES ###########");
 			System.out.println("# 1. PISTOL                   #");
 			System.out.println("# 2. BAZOOKA                  #");
@@ -32,25 +31,146 @@ public class Personagem {
 				this.setnomeGolpe("Pistol");
 				this.setForcaGolpe(110);
 				this.setdanoGolpe(0);
-				System.out.println("Você escolheu o ataque " + this.getnomeGolpe());
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
 				break;
 			case 2:
 				this.setnomeGolpe("Bazooka");
 				this.setForcaGolpe(100);
 				this.setdanoGolpe(0);
-				System.out.println("Você escolheu o ataque " + this.getnomeGolpe());
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
 				break;
 			case 3:
 				this.setnomeGolpe("Rocket");
 				this.setForcaGolpe(150);
 				this.setdanoGolpe(0);
-				System.out.println("Você escolheu o ataque " + this.getnomeGolpe());
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
 				break;
 			case 4:
 				this.setnomeGolpe("Rifle");
 				this.setForcaGolpe(90);
 				this.setdanoGolpe(0);
-				System.out.println("Você escolheu o ataque " + this.getnomeGolpe());
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			default:
+				System.out.println("Esse ataque não existe!");
+				break;
+			}
+
+		} else if (this.getNome() == "Zoro") {
+			System.out.println("########### ATAQUES ###########");
+			System.out.println("# 1. SANJUROKU                #");
+			System.out.println("# 2. TAKA NAMI                #");
+			System.out.println("# 3. ONE GIRI                 #");
+			System.out.println("# 4. RENGOKU                  #");
+			System.out.println("###############################");
+			System.out.print("Digite o número do ataque:  ");
+			int ataque2 = sc.nextInt();
+			System.out.println("###############################");
+
+			switch (ataque2) {
+			case 1:
+				this.setnomeGolpe("Sanjuroku");
+				this.setForcaGolpe(110);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 2:
+				this.setnomeGolpe("Taka Nami");
+				this.setForcaGolpe(100);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 3:
+				this.setnomeGolpe("One Giri");
+				this.setForcaGolpe(150);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 4:
+				this.setnomeGolpe("Rengoku");
+				this.setForcaGolpe(90);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			default:
+				System.out.println("Esse ataque não existe!");
+				break;
+			}
+		} else if (this.getNome() == "Usopp") {
+			System.out.println("########### ATAQUES ###########");
+			System.out.println("# 1. KABUTO                   #");
+			System.out.println("# 2. POP GREEN                #");
+			System.out.println("# 3. ESTILINGADA              #");
+			System.out.println("# 4. MENTIRA                  #");
+			System.out.println("###############################");
+			System.out.print("Digite o número do ataque:  ");
+			int ataque2 = sc.nextInt();
+			System.out.println("###############################");
+
+			switch (ataque2) {
+			case 1:
+				this.setnomeGolpe("Kabuto");
+				this.setForcaGolpe(110);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 2:
+				this.setnomeGolpe("Pop Green");
+				this.setForcaGolpe(100);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 3:
+				this.setnomeGolpe("Estilingada");
+				this.setForcaGolpe(150);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			case 4:
+				this.setnomeGolpe("Mentira");
+				this.setForcaGolpe(90);
+				this.setdanoGolpe(0);
+				System.out.println(this.getNome() + " está atacando com o ataque " + this.getnomeGolpe());
+				break;
+			default:
+				System.out.println("Esse ataque não existe!");
+				break;
+			}
+		} else if (this.getNome() == "Nami") {
+			System.out.println("########### ATAQUES ###########");
+			System.out.println("# 1. PAULADA                  #");
+			System.out.println("# 2. CASETADA                 #");
+			System.out.println("# 3. PORRADA                  #");
+			System.out.println("# 4. LAPADA                   #");
+			System.out.println("###############################");
+			System.out.print("Digite o número do ataque:  ");
+			int ataque2 = sc.nextInt();
+			System.out.println("###############################");
+
+			switch (ataque2) {
+			case 1:
+				this.setnomeGolpe("Paulada");
+				this.setForcaGolpe(110);
+				this.setdanoGolpe(0);
+				System.out.println("A " + this.getNome() + " está dando uma " + this.getnomeGolpe());
+				break;
+			case 2:
+				this.setnomeGolpe("Casetada");
+				this.setForcaGolpe(100);
+				this.setdanoGolpe(0);
+				System.out.println("A " + this.getNome() + " está dando uma " + this.getnomeGolpe());
+				break;
+			case 3:
+				this.setnomeGolpe("Porrada");
+				this.setForcaGolpe(150);
+				this.setdanoGolpe(0);
+				System.out.println("A " + this.getNome() + " está dando uma " + this.getnomeGolpe());
+				break;
+			case 4:
+				this.setnomeGolpe("Lapada");
+				this.setForcaGolpe(90);
+				this.setdanoGolpe(0);
+				System.out.println("A " + this.getNome() + " está dando uma " + this.getnomeGolpe());
 				break;
 			default:
 				System.out.println("Esse ataque não existe!");
