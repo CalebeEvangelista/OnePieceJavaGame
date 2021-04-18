@@ -19,19 +19,19 @@ public class jogo {
 		
 		Personagem usopp = new Personagem();
 		usopp.setNome("Usopp");
-		usopp.setDefesa(150);
+		usopp.setDefesa(180);
 		usopp.setVida(20);
 		usopp.setVivo(true);
 
 		Personagem nami = new Personagem();
 		nami.setNome("Nami");
-		nami.setDefesa(140);
+		nami.setDefesa(170);
 		nami.setVida(15);
 		nami.setVivo(true);
 		
 		while (true) {
 			System.out.println("###############################");
-			System.out.println("# ONE PIECE BATTLE GAME v2.50 #");
+			System.out.println("# ONE PIECE BATTLE GAME v3.00 #");
 			System.out.println("###############################");
 			System.out.println("########## ATACANTES ##########");
 			System.out.println("# 1. RUFFY                    #");

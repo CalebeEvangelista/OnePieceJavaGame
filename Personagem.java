@@ -180,19 +180,81 @@ public class Personagem {
 	}
 
 	public void atacar(Personagem inimigo) {
+		
 		// AVISO DE COMBATE
 		System.out.println(this.getNome() + " Está atacando " + inimigo.getNome());
 
 		// RETIRAR DA VIDA E DA DEFESA
 		if (inimigo.getDefesa() < this.getForcaGolpe()) {
-			double ataque = this.getForcaGolpe() - inimigo.getDefesa();
-			inimigo.setVida(inimigo.getVida() - ataque);
-
-		} else { // AVISAR QUE NÃO TOMOU DANO NA VIDA CASO FOR MENOR E IGUAL A DEFESA
-			double ataque = inimigo.getDefesa() - this.getForcaGolpe();
+			
+			// GERA UM NUMERO ENTRE 0 E 10
+			int max = 10;
+	        int min = 0;
+	        int range = max - min + 1;
+	        int rand = 0;
+	        
+	        for (int i = 0; i < 1; i++) {
+	            rand = (int)(Math.random() * range) + min; 
+	            }
+	        
+	        // FAZ O CALCULO DO DANO
+	        if (rand <= 5) {
+	        	this.setdanoGolpe(this.getForcaGolpe() / 2);
+	        	System.out.println("Acertou mas deu um dano baixo!");
+	        } else if (rand > 5 && rand < 8) {
+	        	this.setdanoGolpe(0);
+	        	System.out.println("Errou o golpe!");
+	        } else {
+	        	this.setdanoGolpe(this.getForcaGolpe());
+	        	System.out.println("Dano critico");
+	        }
+	        
+	        if (this.getdanoGolpe() != 0) {
+	        	if (this.getdanoGolpe() < inimigo.defesa) {
+	        		double ataque = inimigo.getDefesa() - this.getdanoGolpe();
+	    			System.out.println(ataque);
+	    			inimigo.setVida(inimigo.getVida() - ataque);
+	    			System.out.println("Chegou no if 2 com " + inimigo.getVida() + " de vida!");
+	        	} else {
+	        		double ataque = this.getdanoGolpe() - inimigo.getDefesa();
+	    			System.out.println(ataque);
+	    			inimigo.setVida(inimigo.getVida() - ataque);
+	    			System.out.println("Chegou no if com " + inimigo.getVida() + " de vida!");
+	        	}
+	        
+	        } else {
+				System.out.println("Chegou no else com " + inimigo.getVida() + " de vida!");
+	        }
+	        	
+			
+	     } else { // AVISAR QUE NÃO TOMOU DANO NA VIDA CASO FOR MENOR E IGUAL A DEFESA
+	    	// VAI GERAR UM NUMERO ALEATORIO ENTRE 0 E 10
+			int max = 10;
+	        int min = 0;
+	        int range = max - min + 1;
+	        int rand = 0;
+	  
+	        for (int i = 0; i < 1; i++) {
+	            rand = (int)(Math.random() * range) + min;          
+	        }
+	        
+	        //CALCULA O DANO    
+	        if (rand <= 5) {
+	        	this.setdanoGolpe(this.getForcaGolpe() / 2);
+	        	System.out.println("Acertou mas deu um dano baixo!");
+	        } else if (rand > 5 && rand < 8) {
+	        	this.setdanoGolpe(0);
+	        	System.out.println("Errou o golpe!");
+	        }else {
+	        	this.setdanoGolpe(this.getForcaGolpe());
+	        	System.out.println("Dano critico");
+	        }
+	        
+			double ataque = inimigo.getDefesa() - this.getdanoGolpe();
 			inimigo.setDefesa(ataque);
 			System.out.println(inimigo.getNome() + " Não tomou dano na vida, porém ficou com " + inimigo.getDefesa()
 					+ " de defesa!");
+			System.out.println(inimigo.getVida());
 		}
 
 		if (inimigo.getVida() <= 0) {
